@@ -10,7 +10,7 @@ Social Media Application
 - Firebase Cloud Firestore, Storage and Authentication synced
 
 ##
-
+```text
  ├── assets
  |   ├── lang
  |       ├── en.json             # English translation
@@ -18,17 +18,17 @@ Social Media Application
  |    
  ├── lib
      ├── helper                  
-     │   ├── app_localizations   # Multi language helper
-     │   |── ImageHelper         # End-to-end, integration tests (alternatively `e2e`)
+     |   ├── app_localizations   # Multi language helper
+     |   ├── ImageHelper         # End-to-end, integration tests (alternatively `e2e`)
      |
      ├── models                  
      ├── screens                 # User Interfaces
      ├── services                
-     │   ├── auth.dart           # Firebase Authenticattion Service
-     │   |── database.dart       # Firebase Cloud Firestore Service
+     |   ├── auth.dart           # Firebase Authenticattion Service
+     |   |── database.dart       # Firebase Cloud Firestore Service
      |   |── storage.dart        # Firebase Storage Service
      |
      ├── shared                  # Common Widgets
      ├── validation              # Input Validators
      └── wrapper.dart            # User auth checker. 
-
+```
