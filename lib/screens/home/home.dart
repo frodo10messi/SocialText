@@ -190,7 +190,6 @@ class HomeState extends State<Home> with PostValidationMixin {
                 key: formKey,
                 child: TextFormField(
                   autofocus: false,
-                  textInputAction: TextInputAction.newline,
                   keyboardType: TextInputType.text,
                   validator: validatePost,
                   minLines: 1,

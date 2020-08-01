@@ -33,6 +33,7 @@ class KayitOlState extends State<KayitOl> with UserValidationMixin {
       newUser.soyad = surNameCtrl.text.trim();
       newUser.email = emailCtrl.text.trim();
       newUser.sifre = pwCtrl.text.trim();
+      newUser.photo_url = '';
 
       dynamic result = await authService.kayitOl(newUser);
       newUser.setClear();
