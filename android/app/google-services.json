@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "239318939956",
+    "firebase_url": "https://firestorelogindeneme.firebaseio.com",
+    "project_id": "firestorelogindeneme",
+    "storage_bucket": "firestorelogindeneme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239318939956:android:63fc1ee2a58c1562314d61",
+        "android_client_info": {
+          "package_name": "firestorelogin.firestore_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239318939956-5rpfb2pdmg88iqub7e9a8nn0286kgrlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkLJSzVIuVpGTMxPjAJdR_wIdq0aaVVDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239318939956-5rpfb2pdmg88iqub7e9a8nn0286kgrlc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
