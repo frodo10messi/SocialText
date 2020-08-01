@@ -32,3 +32,23 @@ Social Media and Realtime Chat Application using Flutter
      ├── validation              # Input Validators
      └── wrapper.dart            # User auth checker. 
 ```
+
+## How to Use 
+
+**Step 1:** Clone the repository
+
+```
+https://github.com/ahm3tcelik/SocialText.git
+```
+
+**Step 2:** Setup the Firebase
+
+Enable Authentication and Cloud firestore
+
+**Step 3:**
+
+Go to project root and execute the following command in console to get the required dependencies: 
+
+```
+flutter pub get 
+```
