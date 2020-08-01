@@ -1,6 +1,6 @@
 # Social Text
 
-Social Media Application
+Social Media and Realtime Chat Application using Flutter
 
 ## Features
 - Lazy Loading Data From Database
@@ -19,7 +19,7 @@ Social Media Application
  ├── lib
      ├── helper                  
      |   ├── app_localizations   # Multi language helper
-     |   ├── ImageHelper         # End-to-end, integration tests (alternatively `e2e`)
+     |   ├── ...
      |
      ├── models                  
      ├── screens                 # User Interfaces
