@@ -20,7 +20,7 @@ class MessageTile extends StatelessWidget {
       alignment: isSelf ? Alignment.topRight : Alignment.bottomLeft,
       child: Container(
         constraints: BoxConstraints(
-          minWidth: MediaQuery.of(context).size.width * 0.30,
+          minWidth: MediaQuery.of(context).size.width * 0.20,
           maxWidth: MediaQuery.of(context).size.width * 0.70),
         padding:
         EdgeInsets.symmetric(horizontal: 5, vertical: 8),

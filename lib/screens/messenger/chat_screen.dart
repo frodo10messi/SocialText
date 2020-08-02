@@ -31,26 +31,41 @@ class ChatScreenState extends State<ChatScreen> {
 
   Future getImageFromDevice() async {
     File image = await ImagePicker.pickImage(source: ImageSource.gallery);
-    showDialog(context: context, builder: (context) {
-      return AlertDialog(
-        title: Text(AppLocalizations.of(context).translate('send_image')),
-        elevation: 5,
-        content: Image.file(image, fit: BoxFit.fill),
-        actions: <Widget>[
-          MaterialButton(onPressed: () {Navigator.pop(context);}, child: Text(AppLocalizations.of(context).translate('cancel')),),
-          MaterialButton(onPressed: () async {
-            Navigator.pop(context);
-            var result = await storageService.uploadChatImage(image, widget.chatId, widget.currentUserId);
-            if(result == null) {
-              Toast.show(AppLocalizations.of(context).translate('image_fail'), context, duration: Toast.LENGTH_LONG);
-            }
-            else {
-              insertMessage(result.toString(), true);
-            }
-          }, child: Text(AppLocalizations.of(context).translate('send')),)
-        ],
-      );
-    },);
+    if (image == null) return;
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(AppLocalizations.of(context).translate('send_image')),
+          elevation: 5,
+          content: Image.file(image, fit: BoxFit.fill),
+          actions: <Widget>[
+            MaterialButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text(AppLocalizations.of(context).translate('cancel')),
+            ),
+            MaterialButton(
+              onPressed: () async {
+                Navigator.pop(context);
+                var result = await storageService.uploadChatImage(
+                    image, widget.chatId, widget.currentUserId);
+                if (result == null) {
+                  Toast.show(
+                      AppLocalizations.of(context).translate('image_fail'),
+                      context,
+                      duration: Toast.LENGTH_LONG);
+                } else {
+                  insertMessage(result.toString(), true);
+                }
+              },
+              child: Text(AppLocalizations.of(context).translate('send')),
+            )
+          ],
+        );
+      },
+    );
   }
 
   void onSubmitMsg() async {
@@ -61,6 +76,7 @@ class ChatScreenState extends State<ChatScreen> {
       insertMessage(msg, false);
     }
   }
+
   void insertMessage(String content, bool isImg) async {
     databaseService.insertMessage(
         Message(
@@ -133,7 +149,8 @@ class ChatScreenState extends State<ChatScreen> {
                     maxLines: 3,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: AppLocalizations.of(context).translate('msgbox_placeholder'),
+                      hintText: AppLocalizations.of(context)
+                          .translate('msgbox_placeholder'),
                     ),
                     controller: sendMsgCtrl,
                   ),

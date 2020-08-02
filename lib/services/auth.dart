@@ -38,7 +38,7 @@ class AuthService {
           email: user.email, password: user.sifre);
       FirebaseUser firebaseUser = result.user;
       await DatabaseService().updateUser(
-          User(uid: firebaseUser.uid, ad: user.ad, email: user.email, sifre: user.sifre, soyad: user.soyad));
+          User(uid: firebaseUser.uid, ad: user.ad, email: user.email, sifre: user.sifre, soyad: user.soyad, photo_url: user.photo_url));
       return -1; // success
     }
     on PlatformException catch (exception) {

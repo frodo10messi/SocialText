@@ -1,3 +1,4 @@
+import 'package:social_text/helper/app_localizations.dart';
 import 'package:social_text/models/User.dart';
 import 'package:social_text/screens/messenger/user_list.dart';
 import 'package:social_text/services/database.dart';
@@ -66,7 +67,7 @@ class MessengerState extends State<Messenger> {
     return TextFormField(
       controller: searchCtrl,
       decoration: InputDecoration(
-        hintText: "Search here...",
+        hintText: AppLocalizations.of(context).translate('search_here'),
         prefixIcon: Icon(Icons.search, color: Colors.white),
         suffixIcon: IconButton(
             icon: Icon(Icons.clear),
