@@ -9,7 +9,10 @@ Social Media and Realtime Chat Application using Flutter
 - Firebase CRUD Operations
 - Firebase Cloud Firestore, Storage and Authentication synced
 
-##
+## Youtube Video
+[![Flutter Social Media & Realtime Chat Example Application - (Social Text)](https://img.youtube.com/vi/4D7TfZ1EenA/0.jpg)](https://www.youtube.com/watch?v=4D7TfZ1EenA)
+
+## Project Structure
 ```text
  ├── assets
  |   ├── lang
